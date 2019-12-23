@@ -69,9 +69,10 @@ Partial Class Form1
         '
         'btnPostScore
         '
-        Me.btnPostScore.Location = New System.Drawing.Point(153, 411)
+        Me.btnPostScore.Location = New System.Drawing.Point(204, 506)
+        Me.btnPostScore.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPostScore.Name = "btnPostScore"
-        Me.btnPostScore.Size = New System.Drawing.Size(75, 23)
+        Me.btnPostScore.Size = New System.Drawing.Size(100, 28)
         Me.btnPostScore.TabIndex = 0
         Me.btnPostScore.Text = "Post Score"
         Me.btnPostScore.UseVisualStyleBackColor = True
@@ -79,92 +80,107 @@ Partial Class Form1
         'cboCourse
         '
         Me.cboCourse.FormattingEnabled = True
-        Me.cboCourse.Location = New System.Drawing.Point(107, 186)
+        Me.cboCourse.Location = New System.Drawing.Point(143, 229)
+        Me.cboCourse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCourse.Name = "cboCourse"
-        Me.cboCourse.Size = New System.Drawing.Size(121, 21)
+        Me.cboCourse.Size = New System.Drawing.Size(160, 24)
         Me.cboCourse.TabIndex = 2
         '
         'cboHolesPlayed
         '
         Me.cboHolesPlayed.FormattingEnabled = True
-        Me.cboHolesPlayed.Location = New System.Drawing.Point(116, 73)
+        Me.cboHolesPlayed.Location = New System.Drawing.Point(155, 90)
+        Me.cboHolesPlayed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboHolesPlayed.Name = "cboHolesPlayed"
-        Me.cboHolesPlayed.Size = New System.Drawing.Size(46, 21)
+        Me.cboHolesPlayed.Size = New System.Drawing.Size(60, 24)
         Me.cboHolesPlayed.TabIndex = 3
         '
         'cboTeePlayed
         '
         Me.cboTeePlayed.FormattingEnabled = True
-        Me.cboTeePlayed.Location = New System.Drawing.Point(107, 224)
+        Me.cboTeePlayed.Location = New System.Drawing.Point(143, 276)
+        Me.cboTeePlayed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboTeePlayed.Name = "cboTeePlayed"
-        Me.cboTeePlayed.Size = New System.Drawing.Size(157, 21)
+        Me.cboTeePlayed.Size = New System.Drawing.Size(208, 24)
         Me.cboTeePlayed.TabIndex = 4
         '
         'lblCourse
         '
         Me.lblCourse.AutoSize = True
-        Me.lblCourse.Location = New System.Drawing.Point(61, 189)
+        Me.lblCourse.Location = New System.Drawing.Point(81, 233)
+        Me.lblCourse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCourse.Name = "lblCourse"
-        Me.lblCourse.Size = New System.Drawing.Size(40, 13)
+        Me.lblCourse.Size = New System.Drawing.Size(51, 16)
         Me.lblCourse.TabIndex = 5
         Me.lblCourse.Text = "Course"
         '
         'txtScore
         '
-        Me.txtScore.Location = New System.Drawing.Point(116, 109)
+        Me.txtScore.Location = New System.Drawing.Point(155, 134)
+        Me.txtScore.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtScore.Name = "txtScore"
-        Me.txtScore.Size = New System.Drawing.Size(33, 20)
+        Me.txtScore.Size = New System.Drawing.Size(43, 22)
         Me.txtScore.TabIndex = 6
         '
         'lblScore
         '
         Me.lblScore.AutoSize = True
-        Me.lblScore.Location = New System.Drawing.Point(75, 112)
+        Me.lblScore.Location = New System.Drawing.Point(100, 138)
+        Me.lblScore.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblScore.Name = "lblScore"
-        Me.lblScore.Size = New System.Drawing.Size(35, 13)
+        Me.lblScore.Size = New System.Drawing.Size(44, 16)
         Me.lblScore.TabIndex = 7
         Me.lblScore.Text = "Score"
         '
         'lblHoles
         '
         Me.lblHoles.AutoSize = True
-        Me.lblHoles.Location = New System.Drawing.Point(41, 76)
+        Me.lblHoles.Location = New System.Drawing.Point(55, 94)
+        Me.lblHoles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHoles.Name = "lblHoles"
-        Me.lblHoles.Size = New System.Drawing.Size(69, 13)
+        Me.lblHoles.Size = New System.Drawing.Size(90, 16)
         Me.lblHoles.TabIndex = 10
         Me.lblHoles.Text = "Holes Played"
         '
         'lblTeePlayed
         '
         Me.lblTeePlayed.AutoSize = True
-        Me.lblTeePlayed.Location = New System.Drawing.Point(40, 227)
+        Me.lblTeePlayed.Location = New System.Drawing.Point(53, 279)
+        Me.lblTeePlayed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTeePlayed.Name = "lblTeePlayed"
-        Me.lblTeePlayed.Size = New System.Drawing.Size(61, 13)
+        Me.lblTeePlayed.Size = New System.Drawing.Size(79, 16)
         Me.lblTeePlayed.TabIndex = 11
         Me.lblTeePlayed.Text = "Tee Played"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 35)
+        Me.DateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.HotTrack
+        Me.DateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.DateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(155, 43)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(319, 24)
         Me.DateTimePicker1.TabIndex = 12
         '
         'DTPicker
         '
         Me.DTPicker.AutoSize = True
-        Me.DTPicker.Location = New System.Drawing.Point(45, 41)
+        Me.DTPicker.Location = New System.Drawing.Point(60, 50)
+        Me.DTPicker.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DTPicker.Name = "DTPicker"
-        Me.DTPicker.Size = New System.Drawing.Size(65, 13)
+        Me.DTPicker.Size = New System.Drawing.Size(83, 16)
         Me.DTPicker.TabIndex = 13
         Me.DTPicker.Text = "Date Played"
         '
         'rbAuto
         '
         Me.rbAuto.AutoSize = True
-        Me.rbAuto.Location = New System.Drawing.Point(116, 143)
+        Me.rbAuto.Location = New System.Drawing.Point(155, 176)
+        Me.rbAuto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rbAuto.Name = "rbAuto"
-        Me.rbAuto.Size = New System.Drawing.Size(47, 17)
+        Me.rbAuto.Size = New System.Drawing.Size(53, 20)
         Me.rbAuto.TabIndex = 14
         Me.rbAuto.TabStop = True
         Me.rbAuto.Text = "Auto"
@@ -173,9 +189,10 @@ Partial Class Form1
         'rbManual
         '
         Me.rbManual.AutoSize = True
-        Me.rbManual.Location = New System.Drawing.Point(180, 143)
+        Me.rbManual.Location = New System.Drawing.Point(240, 176)
+        Me.rbManual.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.rbManual.Name = "rbManual"
-        Me.rbManual.Size = New System.Drawing.Size(60, 17)
+        Me.rbManual.Size = New System.Drawing.Size(70, 20)
         Me.rbManual.TabIndex = 15
         Me.rbManual.TabStop = True
         Me.rbManual.Text = "Manual"
@@ -184,234 +201,263 @@ Partial Class Form1
         'lblAutoManual
         '
         Me.lblAutoManual.AutoSize = True
-        Me.lblAutoManual.Location = New System.Drawing.Point(32, 145)
+        Me.lblAutoManual.Location = New System.Drawing.Point(43, 178)
+        Me.lblAutoManual.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAutoManual.Name = "lblAutoManual"
-        Me.lblAutoManual.Size = New System.Drawing.Size(69, 13)
+        Me.lblAutoManual.Size = New System.Drawing.Size(83, 16)
         Me.lblAutoManual.TabIndex = 16
         Me.lblAutoManual.Text = "Auto/Manual"
         '
         'txtRoundIndex
         '
-        Me.txtRoundIndex.Location = New System.Drawing.Point(483, 38)
+        Me.txtRoundIndex.Location = New System.Drawing.Point(644, 47)
+        Me.txtRoundIndex.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRoundIndex.Name = "txtRoundIndex"
-        Me.txtRoundIndex.Size = New System.Drawing.Size(41, 20)
+        Me.txtRoundIndex.Size = New System.Drawing.Size(53, 22)
         Me.txtRoundIndex.TabIndex = 17
         '
         'txtIndex10
         '
-        Me.txtIndex10.Location = New System.Drawing.Point(639, 38)
+        Me.txtIndex10.Location = New System.Drawing.Point(852, 47)
+        Me.txtIndex10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIndex10.Name = "txtIndex10"
-        Me.txtIndex10.Size = New System.Drawing.Size(46, 20)
+        Me.txtIndex10.Size = New System.Drawing.Size(60, 22)
         Me.txtIndex10.TabIndex = 18
         '
         'lblTxtRoundIndex
         '
         Me.lblTxtRoundIndex.AutoSize = True
-        Me.lblTxtRoundIndex.Location = New System.Drawing.Point(409, 41)
+        Me.lblTxtRoundIndex.Location = New System.Drawing.Point(545, 50)
+        Me.lblTxtRoundIndex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTxtRoundIndex.Name = "lblTxtRoundIndex"
-        Me.lblTxtRoundIndex.Size = New System.Drawing.Size(68, 13)
+        Me.lblTxtRoundIndex.Size = New System.Drawing.Size(83, 16)
         Me.lblTxtRoundIndex.TabIndex = 19
         Me.lblTxtRoundIndex.Text = "Round Index"
         '
         'lblIndex10
         '
         Me.lblIndex10.AutoSize = True
-        Me.lblIndex10.Location = New System.Drawing.Point(600, 41)
+        Me.lblIndex10.Location = New System.Drawing.Point(800, 50)
+        Me.lblIndex10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblIndex10.Name = "lblIndex10"
-        Me.lblIndex10.Size = New System.Drawing.Size(33, 13)
+        Me.lblIndex10.Size = New System.Drawing.Size(40, 16)
         Me.lblIndex10.TabIndex = 20
         Me.lblIndex10.Text = "Index"
         '
         'txtManualCourse
         '
-        Me.txtManualCourse.Location = New System.Drawing.Point(318, 142)
+        Me.txtManualCourse.Location = New System.Drawing.Point(424, 175)
+        Me.txtManualCourse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtManualCourse.Name = "txtManualCourse"
-        Me.txtManualCourse.Size = New System.Drawing.Size(100, 20)
+        Me.txtManualCourse.Size = New System.Drawing.Size(132, 22)
         Me.txtManualCourse.TabIndex = 21
         '
         'txtManualRating
         '
-        Me.txtManualRating.Location = New System.Drawing.Point(466, 143)
+        Me.txtManualRating.Location = New System.Drawing.Point(621, 176)
+        Me.txtManualRating.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtManualRating.Name = "txtManualRating"
-        Me.txtManualRating.Size = New System.Drawing.Size(100, 20)
+        Me.txtManualRating.Size = New System.Drawing.Size(132, 22)
         Me.txtManualRating.TabIndex = 22
         '
         'txtManualSlope
         '
-        Me.txtManualSlope.Location = New System.Drawing.Point(603, 143)
+        Me.txtManualSlope.Location = New System.Drawing.Point(804, 176)
+        Me.txtManualSlope.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtManualSlope.Name = "txtManualSlope"
-        Me.txtManualSlope.Size = New System.Drawing.Size(100, 20)
+        Me.txtManualSlope.Size = New System.Drawing.Size(132, 22)
         Me.txtManualSlope.TabIndex = 23
         '
         'lblManualCourse
         '
         Me.lblManualCourse.AutoSize = True
-        Me.lblManualCourse.Location = New System.Drawing.Point(353, 118)
+        Me.lblManualCourse.Location = New System.Drawing.Point(471, 145)
+        Me.lblManualCourse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblManualCourse.Name = "lblManualCourse"
-        Me.lblManualCourse.Size = New System.Drawing.Size(40, 13)
+        Me.lblManualCourse.Size = New System.Drawing.Size(51, 16)
         Me.lblManualCourse.TabIndex = 24
         Me.lblManualCourse.Text = "Course"
         '
         'lblManualRating
         '
         Me.lblManualRating.AutoSize = True
-        Me.lblManualRating.Location = New System.Drawing.Point(498, 118)
+        Me.lblManualRating.Location = New System.Drawing.Point(664, 145)
+        Me.lblManualRating.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblManualRating.Name = "lblManualRating"
-        Me.lblManualRating.Size = New System.Drawing.Size(38, 13)
+        Me.lblManualRating.Size = New System.Drawing.Size(47, 16)
         Me.lblManualRating.TabIndex = 25
         Me.lblManualRating.Text = "Rating"
         '
         'lblManualSlope
         '
         Me.lblManualSlope.AutoSize = True
-        Me.lblManualSlope.Location = New System.Drawing.Point(636, 118)
+        Me.lblManualSlope.Location = New System.Drawing.Point(848, 145)
+        Me.lblManualSlope.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblManualSlope.Name = "lblManualSlope"
-        Me.lblManualSlope.Size = New System.Drawing.Size(34, 13)
+        Me.lblManualSlope.Size = New System.Drawing.Size(44, 16)
         Me.lblManualSlope.TabIndex = 26
         Me.lblManualSlope.Text = "Slope"
         '
         'txtPutts
         '
-        Me.txtPutts.Location = New System.Drawing.Point(107, 345)
+        Me.txtPutts.Location = New System.Drawing.Point(143, 425)
+        Me.txtPutts.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPutts.Name = "txtPutts"
-        Me.txtPutts.Size = New System.Drawing.Size(31, 20)
+        Me.txtPutts.Size = New System.Drawing.Size(40, 22)
         Me.txtPutts.TabIndex = 27
         '
         'lblPutts
         '
         Me.lblPutts.AutoSize = True
-        Me.lblPutts.Location = New System.Drawing.Point(70, 348)
+        Me.lblPutts.Location = New System.Drawing.Point(93, 428)
+        Me.lblPutts.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPutts.Name = "lblPutts"
-        Me.lblPutts.Size = New System.Drawing.Size(31, 13)
+        Me.lblPutts.Size = New System.Drawing.Size(37, 16)
         Me.lblPutts.TabIndex = 28
         Me.lblPutts.Text = "Putts"
         '
         'txtRoundPPH
         '
-        Me.txtRoundPPH.Location = New System.Drawing.Point(377, 347)
+        Me.txtRoundPPH.Location = New System.Drawing.Point(503, 427)
+        Me.txtRoundPPH.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRoundPPH.Name = "txtRoundPPH"
-        Me.txtRoundPPH.Size = New System.Drawing.Size(41, 20)
+        Me.txtRoundPPH.Size = New System.Drawing.Size(53, 22)
         Me.txtRoundPPH.TabIndex = 29
         '
         'lblRoundPPH
         '
         Me.lblRoundPPH.AutoSize = True
-        Me.lblRoundPPH.Location = New System.Drawing.Point(292, 352)
+        Me.lblRoundPPH.Location = New System.Drawing.Point(389, 433)
+        Me.lblRoundPPH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRoundPPH.Name = "lblRoundPPH"
-        Me.lblRoundPPH.Size = New System.Drawing.Size(64, 13)
+        Me.lblRoundPPH.Size = New System.Drawing.Size(79, 16)
         Me.lblRoundPPH.TabIndex = 30
         Me.lblRoundPPH.Text = "Round PPH"
         '
         'txtAvgPPH
         '
-        Me.txtAvgPPH.Location = New System.Drawing.Point(542, 351)
+        Me.txtAvgPPH.Location = New System.Drawing.Point(723, 432)
+        Me.txtAvgPPH.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAvgPPH.Name = "txtAvgPPH"
-        Me.txtAvgPPH.Size = New System.Drawing.Size(43, 20)
+        Me.txtAvgPPH.Size = New System.Drawing.Size(56, 22)
         Me.txtAvgPPH.TabIndex = 31
         '
         'lblAVGPPH
         '
         Me.lblAVGPPH.AutoSize = True
-        Me.lblAVGPPH.Location = New System.Drawing.Point(463, 354)
+        Me.lblAVGPPH.Location = New System.Drawing.Point(617, 436)
+        Me.lblAVGPPH.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAVGPPH.Name = "lblAVGPPH"
-        Me.lblAVGPPH.Size = New System.Drawing.Size(48, 13)
+        Me.lblAVGPPH.Size = New System.Drawing.Size(60, 16)
         Me.lblAVGPPH.TabIndex = 32
         Me.lblAVGPPH.Text = "AvgPPH"
         '
         'lblFairwaysHit
         '
         Me.lblFairwaysHit.AutoSize = True
-        Me.lblFairwaysHit.Location = New System.Drawing.Point(37, 271)
+        Me.lblFairwaysHit.Location = New System.Drawing.Point(49, 334)
+        Me.lblFairwaysHit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFairwaysHit.Name = "lblFairwaysHit"
-        Me.lblFairwaysHit.Size = New System.Drawing.Size(64, 13)
+        Me.lblFairwaysHit.Size = New System.Drawing.Size(81, 16)
         Me.lblFairwaysHit.TabIndex = 34
         Me.lblFairwaysHit.Text = "Fairways Hit"
         '
         'txtRndPctFwysHit
         '
-        Me.txtRndPctFwysHit.Location = New System.Drawing.Point(377, 264)
+        Me.txtRndPctFwysHit.Location = New System.Drawing.Point(503, 325)
+        Me.txtRndPctFwysHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRndPctFwysHit.Name = "txtRndPctFwysHit"
-        Me.txtRndPctFwysHit.Size = New System.Drawing.Size(41, 20)
+        Me.txtRndPctFwysHit.Size = New System.Drawing.Size(53, 22)
         Me.txtRndPctFwysHit.TabIndex = 35
         '
         'txtAvgPctFwysHit
         '
-        Me.txtAvgPctFwysHit.Location = New System.Drawing.Point(542, 267)
+        Me.txtAvgPctFwysHit.Location = New System.Drawing.Point(723, 329)
+        Me.txtAvgPctFwysHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAvgPctFwysHit.Name = "txtAvgPctFwysHit"
-        Me.txtAvgPctFwysHit.Size = New System.Drawing.Size(43, 20)
+        Me.txtAvgPctFwysHit.Size = New System.Drawing.Size(56, 22)
         Me.txtAvgPctFwysHit.TabIndex = 36
         '
         'lblRndPctFwysHit
         '
         Me.lblRndPctFwysHit.AutoSize = True
-        Me.lblRndPctFwysHit.Location = New System.Drawing.Point(292, 261)
+        Me.lblRndPctFwysHit.Location = New System.Drawing.Point(389, 321)
+        Me.lblRndPctFwysHit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRndPctFwysHit.Name = "lblRndPctFwysHit"
-        Me.lblRndPctFwysHit.Size = New System.Drawing.Size(79, 26)
+        Me.lblRndPctFwysHit.Size = New System.Drawing.Size(97, 32)
         Me.lblRndPctFwysHit.TabIndex = 37
         Me.lblRndPctFwysHit.Text = "Round Percent" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fairways Hit"
         '
         'lblAvgPctFwysHit
         '
         Me.lblAvgPctFwysHit.AutoSize = True
-        Me.lblAvgPctFwysHit.Location = New System.Drawing.Point(449, 261)
+        Me.lblAvgPctFwysHit.Location = New System.Drawing.Point(599, 321)
+        Me.lblAvgPctFwysHit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAvgPctFwysHit.Name = "lblAvgPctFwysHit"
-        Me.lblAvgPctFwysHit.Size = New System.Drawing.Size(87, 26)
+        Me.lblAvgPctFwysHit.Size = New System.Drawing.Size(109, 32)
         Me.lblAvgPctFwysHit.TabIndex = 38
         Me.lblAvgPctFwysHit.Text = "Average Percent" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Fairways Hit"
         '
         'txtGreensHit
         '
-        Me.txtGreensHit.Location = New System.Drawing.Point(107, 306)
+        Me.txtGreensHit.Location = New System.Drawing.Point(143, 377)
+        Me.txtGreensHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtGreensHit.Name = "txtGreensHit"
-        Me.txtGreensHit.Size = New System.Drawing.Size(31, 20)
+        Me.txtGreensHit.Size = New System.Drawing.Size(40, 22)
         Me.txtGreensHit.TabIndex = 39
         '
         'lblGreensHit
         '
         Me.lblGreensHit.AutoSize = True
-        Me.lblGreensHit.Location = New System.Drawing.Point(45, 309)
+        Me.lblGreensHit.Location = New System.Drawing.Point(60, 380)
+        Me.lblGreensHit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblGreensHit.Name = "lblGreensHit"
-        Me.lblGreensHit.Size = New System.Drawing.Size(57, 13)
+        Me.lblGreensHit.Size = New System.Drawing.Size(71, 16)
         Me.lblGreensHit.TabIndex = 40
         Me.lblGreensHit.Text = "Greens Hit"
         '
         'txtRndPctGrnsHit
         '
-        Me.txtRndPctGrnsHit.Location = New System.Drawing.Point(377, 309)
+        Me.txtRndPctGrnsHit.Location = New System.Drawing.Point(503, 380)
+        Me.txtRndPctGrnsHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRndPctGrnsHit.Name = "txtRndPctGrnsHit"
-        Me.txtRndPctGrnsHit.Size = New System.Drawing.Size(41, 20)
+        Me.txtRndPctGrnsHit.Size = New System.Drawing.Size(53, 22)
         Me.txtRndPctGrnsHit.TabIndex = 41
         '
         'lblRndPctGrnsHIt
         '
         Me.lblRndPctGrnsHIt.AutoSize = True
-        Me.lblRndPctGrnsHIt.Location = New System.Drawing.Point(292, 306)
+        Me.lblRndPctGrnsHIt.Location = New System.Drawing.Point(389, 377)
+        Me.lblRndPctGrnsHIt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRndPctGrnsHIt.Name = "lblRndPctGrnsHIt"
-        Me.lblRndPctGrnsHIt.Size = New System.Drawing.Size(79, 26)
+        Me.lblRndPctGrnsHIt.Size = New System.Drawing.Size(97, 32)
         Me.lblRndPctGrnsHIt.TabIndex = 42
         Me.lblRndPctGrnsHIt.Text = "Round Percent" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Greens Hit"
         '
         'txtAvgPctGrnsHit
         '
-        Me.txtAvgPctGrnsHit.Location = New System.Drawing.Point(542, 312)
+        Me.txtAvgPctGrnsHit.Location = New System.Drawing.Point(723, 384)
+        Me.txtAvgPctGrnsHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAvgPctGrnsHit.Name = "txtAvgPctGrnsHit"
-        Me.txtAvgPctGrnsHit.Size = New System.Drawing.Size(43, 20)
+        Me.txtAvgPctGrnsHit.Size = New System.Drawing.Size(56, 22)
         Me.txtAvgPctGrnsHit.TabIndex = 43
         '
         'lblAvgPctGrnsHit
         '
         Me.lblAvgPctGrnsHit.AutoSize = True
-        Me.lblAvgPctGrnsHit.Location = New System.Drawing.Point(449, 309)
+        Me.lblAvgPctGrnsHit.Location = New System.Drawing.Point(599, 380)
+        Me.lblAvgPctGrnsHit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAvgPctGrnsHit.Name = "lblAvgPctGrnsHit"
-        Me.lblAvgPctGrnsHit.Size = New System.Drawing.Size(87, 26)
+        Me.lblAvgPctGrnsHit.Size = New System.Drawing.Size(109, 32)
         Me.lblAvgPctGrnsHit.TabIndex = 44
         Me.lblAvgPctGrnsHit.Text = "Average Percent" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Greens Hit"
         '
         'btnDisplayTable
         '
-        Me.btnDisplayTable.Location = New System.Drawing.Point(639, 411)
+        Me.btnDisplayTable.Location = New System.Drawing.Point(852, 506)
+        Me.btnDisplayTable.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDisplayTable.Name = "btnDisplayTable"
-        Me.btnDisplayTable.Size = New System.Drawing.Size(88, 23)
+        Me.btnDisplayTable.Size = New System.Drawing.Size(117, 28)
         Me.btnDisplayTable.TabIndex = 45
         Me.btnDisplayTable.Text = "Display Table"
         Me.btnDisplayTable.UseVisualStyleBackColor = True
@@ -419,16 +465,18 @@ Partial Class Form1
         'cboFairwaysHit
         '
         Me.cboFairwaysHit.FormattingEnabled = True
-        Me.cboFairwaysHit.Location = New System.Drawing.Point(107, 268)
+        Me.cboFairwaysHit.Location = New System.Drawing.Point(143, 330)
+        Me.cboFairwaysHit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboFairwaysHit.Name = "cboFairwaysHit"
-        Me.cboFairwaysHit.Size = New System.Drawing.Size(42, 21)
+        Me.cboFairwaysHit.Size = New System.Drawing.Size(55, 24)
         Me.cboFairwaysHit.TabIndex = 46
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.cboFairwaysHit)
         Me.Controls.Add(Me.btnDisplayTable)
         Me.Controls.Add(Me.lblAvgPctGrnsHit)
@@ -472,6 +520,9 @@ Partial Class Form1
         Me.Controls.Add(Me.cboHolesPlayed)
         Me.Controls.Add(Me.cboCourse)
         Me.Controls.Add(Me.btnPostScore)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)

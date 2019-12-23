@@ -185,26 +185,7 @@
 
     End Sub
 
-    'Sub CheckPutts()
-    '    Dim HolesPlayed As Integer
-    '    HolesPlayed = CInt(Form1.cboHolesPlayed.Text)
 
-    '    If Form1.txtPutts.Text = "" Then
-    '        If MessageBox.Show("You must enter a value for putts", "Putts", MessageBoxButtons.OKCancel) = DialogResult.OK Then
-    '            Form1.txtPutts.Focus()
-    '        End If
-    '    End If
-
-    '    If Form1.txtPutts.Text < HolesPlayed Then
-    '        If MessageBox.Show("You can't have fewer putts than the course has holes!", "Putts", MessageBoxButtons.OK) = DialogResult.OK Then
-    '            Form1.txtPutts.Focus()
-    '        End If
-    '    ElseIf Form1.txtPutts.Text > HolesPlayed * 3 Then
-    '        MessageBox.Show("This value is outside a normal range! Are you sure?")
-    '        Form1.txtPutts.Focus()
-    '    End If
-
-    'End Sub
     'follow NCGA rules for calc. of HDCP for less than 20 rounds
 
     Function LowIndexForHolesPlayed() As String
@@ -555,8 +536,11 @@
         If CInt(score) <= Age Then
             FileOpen(1, "C:\users\ben\golfdata\TimesShotAge.txt", OpenMode.Input)
             Input(1, Num)
-            Times = Num + 1
-            Form2.txtTimesShotAge.Text = CStr(Times)
+            Num += 1
+            Form2.txtTimesShotAge.Text = CStr(Num)
+            FileClose(1)
+            FileOpen(1, "C:\users\ben\golfdata\TimesShotAge.txt", OpenMode.Output)
+            Write(1, Num)
             FileClose(1)
         Else
             FileOpen(1, "C:\users\ben\golfdata\TimesShotAge.txt", OpenMode.Input)
@@ -566,9 +550,9 @@
         End If
         FileOpen(1, "C:\users\ben\golfdata\RoundsFrom 1-1-2018.txt", OpenMode.Input)
         FileOpen(2, "C:\users\ben\golfdata\TimesShotAge.txt", OpenMode.Input)
-        Input(2, Times)
+        Input(2, Num)
         Input(1, Rounds)
-        Form2.txtShotAgePct.Text = CStr(Math.Round(Times / Rounds * 100, 2))
+        Form2.txtShotAgePct.Text = CStr(Math.Round(Num / Rounds * 100, 2))
         FileClose(1)
         FileClose(2)
 
@@ -578,5 +562,71 @@
         Write(1, TxtIndex10)
         FileClose(1)
     End Sub
+    Sub CheckPuttsInput(putts As String)
+        Dim HolesThisRound As Integer = Form1.cboHolesPlayed.Text
+        Dim Message As String
+        Dim Heading As String
+
+        If Form1.txtPutts.Text = "" Then
+            Form1.txtPutts.BackColor = Color.Red
+            MessageBox.Show("You must enter a value for putts")
+            Form1.txtPutts.Focus()
+            Form1.txtPutts.BackColor = Color.White
+        ElseIf Form1.txtPutts.Text <> "" Then
+            Select Case HolesThisRound
+                Case Is = 9
+                    If putts < CStr(9) Then
+                        Message = "This value is too low"
+                        Heading = "Putts"
+                        Form1.txtPutts.BackColor = Color.Red
+                        MessageBox.Show(Message, Heading)
+                        Form1.txtPutts.Focus()
+                        Form1.txtPutts.BackColor = Color.White
+                    ElseIf putts > CStr(3 * 9) Then
+                        Message = "This value is too low"
+                        Heading = "Putts"
+                        Form1.txtPutts.BackColor = Color.Red
+                        MessageBox.Show(Message, Heading)
+                        Form1.txtPutts.Focus()
+                        Form1.txtPutts.BackColor = Color.White
+                    End If
+
+                Case Is = 18
+                    If putts > CStr(3 * 18) Then
+                        Message = "This value is outside a normal range."
+                        Heading = "Putts"
+                        Form1.txtPutts.BackColor = Color.Red
+                        MessageBox.Show(Message, Heading)
+                        Form1.txtPutts.Focus()
+                        Form1.txtPutts.BackColor = Color.White
+                    ElseIf putts < CStr(18) Then
+                        Form1.txtPutts.BackColor = Color.Red
+                        MessageBox.Show("You can't have fewer Putts than there are holes on the course", "Putts")
+                        Form1.txtPutts.Focus()
+                        Form1.txtPutts.BackColor = Color.White
+                    End If
+            End Select
+        End If
+    End Sub
+    Sub calculatePuttPerCent(putts As String)
+        Dim TotalPutts As Integer
+        Dim TotalHolesPlayed As Integer
+        Dim HolesThisRound As Integer = Form1.cboHolesPlayed.Text
+
+        FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Input)
+        Input(1, TotalPutts)
+        FileClose(1)
+        TotalPutts += CInt(putts)
+        FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Output)
+        Write(1, TotalPutts)
+        FileClose(1)
+        FileOpen(1, "C:\users\ben\golfdata\cct\totalholes.txt", OpenMode.Input)
+        Input(1, TotalHolesPlayed)
+        FileClose(1)
+
+        Form1.txtRoundPPH.Text = CStr(Math.Round(CInt(putts) / HolesThisRound, 2))
+        Form1.txtAvgPPH.Text = CStr(Math.Round(TotalPutts / TotalHolesPlayed * 100, 2))
+    End Sub
+
 
 End Module

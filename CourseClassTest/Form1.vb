@@ -455,54 +455,9 @@
     'End Function
 
     Private Sub btnPostScore_Click(sender As Object, e As EventArgs) Handles btnPostScore.Click
-        Dim Putts As String = txtPutts.Text
-        Dim HolesThisRound As Integer
-        Dim Message As String
-        Dim Heading As String
+        Dim putts As String = txtPutts.Text
 
-        If Putts = "" Then
-            txtPutts.BackColor = Color.Red
-            MessageBox.Show("You must enter a value for putts")
-            txtPutts.Focus()
-            txtPutts.BackColor = Color.White
-        End If
-
-        HolesThisRound = CInt(cboHolesPlayed.Text)
-
-        Select Case HolesThisRound
-            Case Is = 9
-                If Putts < 9 Then
-                    Message = "This value is too low"
-                    Heading = "Putts"
-                    txtPutts.BackColor = Color.Red
-                    MessageBox.Show(Message, Heading)
-                    txtPutts.Focus()
-                    txtPutts.BackColor = Color.White
-                ElseIf putts > CStr(3 * 9) Then
-                    Message = "This value is too low"
-                    Heading = "Putts"
-                    txtPutts.BackColor = Color.Red
-                    MessageBox.Show(Message, Heading)
-                    txtPutts.Focus()
-                    txtPutts.BackColor = Color.White
-                End If
-
-            Case Is = 18
-                If Putts > CStr(3 * 18) Then
-                    Message = "This value is outside a normal range."
-                    Heading = "Putts"
-                    txtPutts.BackColor = Color.Red
-                    MessageBox.Show(Message, Heading)
-                    txtPutts.Focus()
-                    txtPutts.BackColor = Color.White
-                ElseIf Putts < CStr(18) Then
-                    txtPutts.BackColor = Color.Red
-                    MessageBox.Show("You can't have fewer Putts than there are holes on the course", "Putts")
-                    txtPutts.Focus()
-                    txtPutts.BackColor = Color.White
-                End If
-
-        End Select
+        Call CheckPuttsInput(putts)
 
         Dim CourseName As String
         Dim TeeColor As String
@@ -740,8 +695,8 @@
         'key trap putts textbox.Allow only numbers
         Dim i As Integer
 
-        For i = 0 To 1
-            Select Case e.KeyChar
+
+        Select Case e.KeyChar
                 Case CChar("0") To CChar("9"), ControlChars.Back
                     e.Handled = False
                 Case ControlChars.Cr
@@ -749,7 +704,7 @@
                 Case Else
                     e.Handled = True
             End Select
-        Next i
+
 
     End Sub
     Private Sub txtScore_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtScore.KeyPress
@@ -1082,12 +1037,17 @@
 
 
     Private Sub txtPutts_TextChanged(sender As Object, e As EventArgs) Handles txtPutts.TextChanged
-        Dim Putts As Integer = txtPutts.Text
+        Dim Putts As String = txtPutts.Text
         Dim TotalPutts As Integer
-        Dim HolesThisRound As Integer
+        Dim HolesThisRound As Integer = cboHolesPlayed.Text
         Dim TotalHolesPlayed As Integer
         Dim Message As String
         Dim Heading As String
+        Dim count As Integer
+
+        Call CalculatePuttPerCent(Putts)
+
+
 
         'HolesThisRound = CInt(cboHolesPlayed.Text)
 
@@ -1124,19 +1084,19 @@
         'End Select
 
 
-        FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Input)
-        Input(1, TotalPutts)
-        FileClose(1)
-        TotalPutts += CInt(Putts)
-        FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Output)
-        Write(1, TotalPutts)
-        FileClose(1)
-        FileOpen(1, "C:\users\ben\golfdata\cct\totalholes.txt", OpenMode.Input)
-        Input(1, TotalHolesPlayed)
-        FileClose(1)
+        'FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Input)
+        'Input(1, TotalPutts)
+        'FileClose(1)
+        'TotalPutts += CInt(Putts)
+        'FileOpen(1, "C:\users\ben\golfdata\cct\TotalPutts.txt", OpenMode.Output)
+        'Write(1, TotalPutts)
+        'FileClose(1)
+        'FileOpen(1, "C:\users\ben\golfdata\cct\totalholes.txt", OpenMode.Input)
+        'Input(1, TotalHolesPlayed)
+        'FileClose(1)
 
-        txtRoundPPH.Text = CStr(Math.Round(CInt(Putts) / HolesThisRound, 2))
-        txtAvgPPH.Text = CStr(Math.Round(TotalPutts / TotalHolesPlayed, 2))
+        'txtRoundPPH.Text = CStr(Math.Round(CInt(Putts) / HolesThisRound, 2))
+        'txtAvgPPH.Text = CStr(Math.Round(TotalPutts / TotalHolesPlayed, 2))
     End Sub
 
 
